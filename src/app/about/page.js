@@ -101,7 +101,7 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
               Our journey has been driven by the belief that every special occasion deserves to be celebrated in style.
-              We've expanded our services to include not just professional makeup artistry, but also an extensive
+              We ve expanded our services to include not just professional makeup artistry, but also an extensive
               collection of designer jewellery and lehengas for rent, making luxury fashion accessible to all.
             </p>
 

@@ -223,7 +223,7 @@ export default function MakeupServiceDetailPage({ params }) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <h2 className="text-xl font-bold text-gray-800 mb-4">What's Included</h2>
+                  <h2 className="text-xl font-bold text-gray-800 mb-4">What s Included</h2>
                   <ul className="space-y-2 mb-8">
                     {service.includes.map((item, index) => (
                       <li key={index} className="flex items-start">

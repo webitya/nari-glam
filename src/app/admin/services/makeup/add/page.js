@@ -240,7 +240,7 @@ export default function AddMakeupServicePage() {
             {/* Additional Information */}
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700">What's Included</label>
+                <label className="block text-sm font-medium text-gray-700">What s Included</label>
                 <div className="mt-1 space-y-2">
                   {formData.includes.map((item, index) => (
                     <div key={index} className="flex items-center">

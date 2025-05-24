@@ -48,7 +48,7 @@ export default function ContactSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions or want to book our services? Reach out to us and we'll get back to you as soon as possible.
+            Have questions or want to book our services? Reach out to us and we ll get back to you as soon as possible.
           </p>
         </motion.div>
 
@@ -134,7 +134,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.5 }}
               >
                 <h4 className="font-semibold text-lg mb-2">Thank You!</h4>
-                <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+                <p>Your message has been sent successfully. We ll get back to you as soon as possible.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
