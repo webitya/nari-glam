@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Hero Section with Premium Design */}
-      <section className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-purple-100 py-20 px-6 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-purple-100 py-10 px-6 overflow-hidden">
         {/* Floating Background Elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-pink-200/30 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/30 rounded-full blur-xl"></div>
@@ -72,7 +72,7 @@ export default function Home() {
 
             <div className="lg:w-1/2 flex justify-center relative">
               {/* Premium Floating Badge */}
-              <div className="absolute -top-8 -left-8 z-20">
+              <div className="absolute -top-8 -left-1 z-20">
                 <div className="bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-3xl p-8 w-72 h-72 flex flex-col items-center justify-center text-center shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                   <BiShield className="text-5xl mb-3" />
                   <div className="font-bold text-xl mb-2">Certified</div>
@@ -421,68 +421,7 @@ export default function Home() {
       </section>
 
       {/* Premium App Download Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
-        </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="flex flex-col lg:flex-row items-center text-white">
-            <div className="lg:w-1/2 mb-12 lg:mb-0">
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-                <HiSparkles className="text-yellow-300 mr-2" />
-                <span className="text-white/90">Download Now</span>
-              </div>
-
-              <h2 className="text-4xl font-bold mb-6">Get the NARI GLAM App</h2>
-              <p className="text-white/90 text-xl mb-8 leading-relaxed">
-                Experience seamless booking, exclusive offers, and premium beauty services at your fingertips
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-black/80 backdrop-blur-sm text-white px-8 py-4 rounded-2xl flex items-center gap-3 hover:bg-black/90 transition-colors shadow-xl">
-                  <FaApple className="text-2xl" />
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">Download on the</div>
-                    <div className="font-semibold text-lg">App Store</div>
-                  </div>
-                </button>
-                <button className="bg-black/80 backdrop-blur-sm text-white px-8 py-4 rounded-2xl flex items-center gap-3 hover:bg-black/90 transition-colors shadow-xl">
-                  <FaGooglePlay className="text-2xl" />
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">Get it on</div>
-                    <div className="font-semibold text-lg">Google Play</div>
-                  </div>
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:w-1/2 flex justify-center">
-              <div className="relative">
-                <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
-                  <Image
-                    src="/placeholder.svg?height=500&width=300"
-                    alt="Woman with NARI GLAM App"
-                    width={300}
-                    height={500}
-                    className="rounded-2xl shadow-xl"
-                  />
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900">50%</div>
-                    <div className="text-sm text-gray-600">First Booking</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
