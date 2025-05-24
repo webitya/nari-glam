@@ -410,9 +410,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  "Absolutely amazing experience! The beautician was incredibly professional and skilled. The
+                  Absolutely amazing experience! The beautician was incredibly professional and skilled. The
                   convenience of having salon-quality services at home is unmatched. NARI GLAM has become my go-to for
-                  all beauty needs."
+                  all beauty needs
                 </p>
               </div>
             </div>
