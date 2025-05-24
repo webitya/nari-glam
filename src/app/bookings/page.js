@@ -118,7 +118,7 @@ export default function BookingsPage() {
               <div className="px-4 py-16 sm:px-6 text-center">
                 <FiAlertCircle className="mx-auto h-12 w-12 text-gray-400" />
                 <h3 className="mt-2 text-lg font-medium text-gray-900">No bookings found</h3>
-                <p className="mt-1 text-sm text-gray-500">You haven't made any bookings yet.</p>
+                <p className="mt-1 text-sm text-gray-500">You haven t made any bookings yet.</p>
                 <div className="mt-6">
                   <Link href="/services/makeup">
                     <motion.button
