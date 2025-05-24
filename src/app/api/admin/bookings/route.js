@@ -5,11 +5,15 @@ import clientPromise from "@/lib/mongodb"
 
 // Helper function to check if user is admin
 async function isAdmin(userId) {
-  const client = await clientPromise
-  const db = client.db()
-
-  const user = await db.collection("users").findOne({ _id: userId })
-  return user && user.role === "admin"
+  try {
+    const client = await clientPromise
+    const db = client.db()
+    const user = await db.collection("users").findOne({ _id: userId })
+    return user && user.role === "admin"
+  } catch (error) {
+    console.error("Database connection error:", error)
+    return false
+  }
 }
 
 export async function GET(request) {
@@ -75,6 +79,9 @@ export async function GET(request) {
     )
   } catch (error) {
     console.error("Get admin bookings error:", error)
+    if (error.message.includes("MongoDB URI not configured")) {
+      return NextResponse.json({ error: "Database not configured" }, { status: 503 })
+    }
     return NextResponse.json({ error: "An error occurred while fetching bookings" }, { status: 500 })
   }
 }
@@ -120,6 +127,9 @@ export async function PATCH(request) {
     return NextResponse.json({ message: "Booking status updated successfully" }, { status: 200 })
   } catch (error) {
     console.error("Update booking status error:", error)
+    if (error.message.includes("MongoDB URI not configured")) {
+      return NextResponse.json({ error: "Database not configured" }, { status: 503 })
+    }
     return NextResponse.json({ error: "An error occurred while updating the booking status" }, { status: 500 })
   }
 }
