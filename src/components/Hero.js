@@ -74,7 +74,7 @@ export default function Hero() {
         >
           <div className="relative h-[400px] md:h-[500px] w-full">
             <Image
-              src="/placeholder.svg?height=500&width=500"
+              src="/indianbride.jpeg?height=500&width=500"
               alt="Bridal Makeup and Jewelry"
               fill
               className="object-cover rounded-lg shadow-2xl"

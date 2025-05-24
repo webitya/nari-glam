@@ -26,7 +26,7 @@ export default function AboutSection() {
           >
             <div className="relative h-[500px] w-full rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/welcome.png?height=500&width=500"
                 alt="About Glamour Rentals"
                 fill
                 className="object-cover"
