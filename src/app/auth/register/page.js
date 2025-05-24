@@ -311,7 +311,7 @@ export default function RegisterPage() {
           <form onSubmit={handleVerifyOtp} className="space-y-6">
             <div>
               <p className="text-sm text-gray-600 mb-4">
-                We've sent a verification code to <span className="font-medium">{formData.email}</span>. Please enter
+                We have sent a verification code to <span className="font-medium">{formData.email}</span>. Please enter
                 the code below to verify your email.
               </p>
 
@@ -332,7 +332,7 @@ export default function RegisterPage() {
               </div>
 
               <p className="text-sm text-gray-600 text-center">
-                Didn't receive the code?{" "}
+                Did not receive the code?{" "}
                 <button
                   type="button"
                   className="text-pink-600 hover:text-pink-500 font-medium"
