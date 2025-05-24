@@ -19,7 +19,7 @@ export default function Footer() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Glamour Rentals
+              NARI GLAM
             </motion.h3>
             <motion.p
               className="text-gray-400 mb-6"
