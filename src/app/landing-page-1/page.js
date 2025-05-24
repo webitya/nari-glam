@@ -1,307 +1,418 @@
 import Image from "next/image"
-import { FaStar, FaUsers, FaCalendarAlt, FaMapMarkerAlt, FaApple, FaGooglePlay } from "react-icons/fa"
-import { BiShield, BiUser } from "react-icons/bi"
+import {
+  FaStar,
+  FaUsers,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaApple,
+  FaGooglePlay,
+  FaPlay,
+  FaArrowRight,
+} from "react-icons/fa"
+import { BiShield, BiUser, BiSpa, BiHeart } from "react-icons/bi"
+import { HiSparkles, HiLightningBolt } from "react-icons/hi"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-white overflow-hidden">
+      {/* Hero Section with Premium Design */}
+      <section className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-purple-100 py-20 px-6 overflow-hidden">
+        {/* Floating Background Elements */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-pink-200/30 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-200/30 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-rose-200/40 rounded-full blur-lg"></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-1/2 mb-12 lg:mb-0">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">Beauty At Home</h1>
-              <p className="text-xl text-gray-600 mb-8">Professional beauty services delivered to your doorstep</p>
+              <div className="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg">
+                <HiSparkles className="text-pink-500 mr-2" />
+                <span className="text-gray-700 font-medium">Premium Beauty Experience</span>
+              </div>
 
-              {/* Circular Badge */}
-              <div className="relative mb-8">
-                <div className="bg-pink-500 text-white rounded-full p-8 w-64 h-64 flex flex-col items-center justify-center text-center">
-                  <BiShield className="text-4xl mb-2" />
-                  <div className="font-bold text-lg">Trained</div>
-                  <div className="font-bold text-lg">Professionals</div>
-                  <div className="text-sm mt-2">One-time Use</div>
-                  <div className="text-sm">Hygienic & Safe</div>
+              <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
+                Beauty
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
+                  At Home
+                </span>
+              </h1>
+
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Transform your space into a luxury salon with our certified beauty professionals
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <button className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                  Book Your Session
+                  <FaArrowRight className="inline ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                <button className="flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:shadow-lg transition-all duration-300">
+                  <FaPlay className="text-pink-500" />
+                  Watch Story
+                </button>
+              </div>
+
+              {/* Premium Stats */}
+              <div className="grid grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-900">200K+</div>
+                  <div className="text-gray-600 text-sm">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-900">4.9★</div>
+                  <div className="text-gray-600 text-sm">App Rating</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-900">50+</div>
+                  <div className="text-gray-600 text-sm">Cities</div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:w-1/2 flex justify-center">
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg?height=600&width=300"
-                  alt="NARI GLAM Mobile App"
-                  width={300}
-                  height={600}
-                  className="rounded-3xl shadow-2xl"
-                />
+            <div className="lg:w-1/2 flex justify-center relative">
+              {/* Premium Floating Badge */}
+              <div className="absolute -top-8 -left-8 z-20">
+                <div className="bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-3xl p-8 w-72 h-72 flex flex-col items-center justify-center text-center shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <BiShield className="text-5xl mb-3" />
+                  <div className="font-bold text-xl mb-2">Certified</div>
+                  <div className="font-bold text-xl mb-2">Professionals</div>
+                  <div className="text-sm opacity-90">Hygienic • Safe • Trusted</div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Achievements Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12">Achievements so far</h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaUsers className="text-pink-500 text-2xl" />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">200K+</div>
-              <div className="text-gray-600">Happy Customers</div>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BiUser className="text-blue-500 text-2xl" />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">5K+</div>
-              <div className="text-gray-600">Beauty Experts</div>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaCalendarAlt className="text-green-500 text-2xl" />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">10L+</div>
-              <div className="text-gray-600">Services Delivered</div>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaMapMarkerAlt className="text-purple-500 text-2xl" />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">50+</div>
-              <div className="text-gray-600">Cities</div>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaStar className="text-red-500 text-2xl" />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">4.8+</div>
-              <div className="text-gray-600">App Rating</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Services we offer</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Facial Salon At Home"
-                  width={300}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Facial Salon At Home</h3>
-              <p className="text-gray-600 mb-4">Professional facial treatments in the comfort of your home</p>
-              <button className="text-pink-500 font-semibold">Learn More →</button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Premium Spa At Home"
-                  width={300}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Premium Spa At Home</h3>
-              <p className="text-gray-600 mb-4">Luxury spa experience delivered to your doorstep</p>
-              <button className="text-pink-500 font-semibold">Learn More →</button>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=200&width=300"
-                  alt="Advance Facials"
-                  width={300}
-                  height={200}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Advance Facials</h3>
-              <p className="text-gray-600 mb-4">Advanced skincare treatments with latest technology</p>
-              <button className="text-pink-500 font-semibold">Learn More →</button>
-            </div>
-          </div>
-
-          {/* Beauty Professionals */}
-          <div className="grid grid-cols-3 md:grid-cols-7 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-              <div key={i} className="text-center">
-                <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-2 overflow-hidden">
+              <div className="relative z-10">
+                <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
                   <Image
-                    src="/placeholder.svg?height=80&width=80"
-                    alt={`Professional ${i}`}
-                    width={80}
-                    height={80}
-                    className="w-full h-full object-cover"
+                    src="/placeholder.svg?height=600&width=300"
+                    alt="NARI GLAM Mobile App"
+                    width={300}
+                    height={600}
+                    className="rounded-2xl shadow-xl"
                   />
                 </div>
-                <div className="text-sm font-medium text-gray-800">Expert {i}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Achievements Section */}
+      <section className="py-20 px-6 bg-white relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey So Far</h2>
+            <p className="text-xl text-gray-600">Milestones that define our excellence</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {[
+              { icon: FaUsers, number: "200K+", label: "Happy Customers", color: "pink" },
+              { icon: BiUser, number: "5K+", label: "Beauty Experts", color: "purple" },
+              { icon: FaCalendarAlt, number: "10L+", label: "Services Delivered", color: "blue" },
+              { icon: FaMapMarkerAlt, number: "50+", label: "Cities", color: "green" },
+              { icon: FaStar, number: "4.9", label: "App Rating", color: "yellow" },
+            ].map((item, index) => (
+              <div key={index} className="group text-center">
+                <div
+                  className={`w-20 h-20 bg-gradient-to-br from-${item.color}-100 to-${item.color}-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                >
+                  <item.icon className={`text-${item.color}-500 text-3xl`} />
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">{item.number}</div>
+                <div className="text-gray-600">{item.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Corporate Wellness */}
-      <section className="py-16 px-6 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:w-1/2 mb-8 lg:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Corporate Wellness Program</h2>
-              <p className="text-gray-300 mb-6">
-                Bringing relaxation to your office with our corporate wellness services
-              </p>
-              <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold">
-                Learn More
-              </button>
-            </div>
-            <div className="lg:w-1/2">
-              <Image
-                src="/placeholder.svg?height=300&width=500"
-                alt="Corporate Wellness"
-                width={500}
-                height={300}
-                className="rounded-xl"
-              />
+      {/* Premium Services Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-gray-50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Luxury Services We Offer</h2>
+            <p className="text-xl text-gray-600">Curated experiences for your beauty journey</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "Facial Salon At Home",
+                description: "Professional facial treatments with premium products",
+                image: "/placeholder.svg?height=300&width=400",
+                gradient: "from-pink-400 to-rose-500",
+              },
+              {
+                title: "Premium Spa At Home",
+                description: "Luxury spa experience in your comfort zone",
+                image: "/placeholder.svg?height=300&width=400",
+                gradient: "from-purple-400 to-pink-500",
+              },
+              {
+                title: "Advanced Facials",
+                description: "Cutting-edge skincare with latest technology",
+                image: "/placeholder.svg?height=300&width=400",
+                gradient: "from-blue-400 to-purple-500",
+              },
+            ].map((service, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+                  <div className="relative overflow-hidden">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}
+                    ></div>
+                    <Image
+                      src={service.image || "/placeholder.svg"}
+                      alt={service.title}
+                      width={400}
+                      height={300}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                    <button className="text-pink-500 font-semibold flex items-center group-hover:text-pink-600 transition-colors">
+                      Explore Service
+                      <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Premium Professionals Grid */}
+          <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Our Certified Professionals</h3>
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <div key={i} className="text-center group">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl mx-auto mb-3 overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt={`Professional ${i}`}
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-400 rounded-full border-2 border-white"></div>
+                  </div>
+                  <div className="text-sm font-medium text-gray-800">Expert {i}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* NARI GLAM Salon Section */}
-      <section className="py-16 px-6 bg-pink-50">
+      {/* Premium Corporate Wellness */}
+      <section className="py-20 px-6 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-pink-500/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                <HiLightningBolt className="text-yellow-400 mr-2" />
+                <span className="text-white/90">Corporate Wellness</span>
+              </div>
+
+              <h2 className="text-4xl font-bold mb-6">Transform Your Workplace Wellness</h2>
+              <p className="text-white/80 text-lg mb-8 leading-relaxed">
+                Boost employee morale and productivity with our premium corporate wellness programs designed for modern
+                workplaces.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-white text-gray-900 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-colors">
+                  Learn More
+                </button>
+                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition-colors">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
+                  <Image
+                    src="/placeholder.svg?height=400&width=500"
+                    alt="Corporate Wellness"
+                    width={500}
+                    height={400}
+                    className="rounded-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Brand Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-pink-50 to-purple-50 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-pink-500 mb-6">NARI GLAM Salon</h2>
-          <p className="text-gray-600 text-lg mb-8">
-            Experience premium beauty services with our trained professionals who bring salon-quality treatments to your
-            home.
+          <div className="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 mb-8 shadow-lg">
+            <BiSpa className="text-pink-500 text-2xl mr-3" />
+            <span className="text-2xl font-bold text-gray-900">NARI GLAM</span>
+            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 ml-2">
+              Salon
+            </span>
+          </div>
+
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Where Beauty Meets Excellence</h2>
+          <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Experience the perfect blend of luxury, convenience, and expertise with our premium beauty services that
+            bring the salon experience directly to your doorstep.
           </p>
-          <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold">
-            Book Now
+
+          <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-12 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+            Book Your Experience
           </button>
         </div>
       </section>
 
-      {/* Media Coverage */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* Premium Media Coverage */}
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">MEDIA COVERAGES</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured In Leading Media</h2>
+            <p className="text-xl text-gray-600">Recognition from industry leaders</p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="w-full h-32 bg-gray-200 rounded-lg mb-4"></div>
-                <h3 className="font-bold text-gray-800 mb-2">Media Coverage {i}</h3>
-                <p className="text-gray-600 text-sm">
-                  Featured in leading publications for our innovative beauty services
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Celebrities Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Celebrities love us</h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { name: "SARA BHATIA", role: "Actress" },
-              { name: "NEHA DHUPIA", role: "Actress" },
-              { name: "CHAHATT KHANNA", role: "Actress" },
-              { name: "Celebrity 4", role: "Model" },
-            ].map((celebrity, i) => (
-              <div key={i} className="text-center">
-                <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=128&width=128"
-                    alt={celebrity.name}
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
+              <div key={i} className="group cursor-pointer">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+                  <div className="w-full h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-4 flex items-center justify-center">
+                    <span className="text-gray-400 font-semibold">Media Logo {i}</span>
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">Featured Article {i}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Recognized for innovation in beauty services and customer satisfaction
+                  </p>
                 </div>
-                <h3 className="font-bold text-gray-800">{celebrity.name}</h3>
-                <p className="text-gray-600 text-sm">{celebrity.role}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Customer Reviews */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* Premium Celebrities Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Celebrities</h2>
+            <p className="text-xl text-gray-600">Stars who choose NARI GLAM</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { name: "SARA BHATIA", role: "Bollywood Actress" },
+              { name: "NEHA DHUPIA", role: "TV Personality" },
+              { name: "CHAHATT KHANNA", role: "Film Actress" },
+              { name: "PRIYA SHARMA", role: "Model" },
+            ].map((celebrity, i) => (
+              <div key={i} className="text-center group">
+                <div className="relative mb-4">
+                  <div className="w-32 h-32 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl mx-auto overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/placeholder.svg?height=128&width=128"
+                      alt={celebrity.name}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-white rounded-full p-2 shadow-lg">
+                      <BiHeart className="text-pink-500 text-xl" />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="font-bold text-gray-900 text-sm">{celebrity.name}</h3>
+                <p className="text-gray-600 text-xs">{celebrity.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Customer Reviews */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Love from our customers</h2>
-              <div className="flex items-center mb-4">
-                <span className="text-5xl font-bold text-gray-800">4.5</span>
-                <div className="ml-4">
-                  <div className="flex text-yellow-400 mb-1">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Customers Say</h2>
+
+              <div className="flex items-center mb-8">
+                <div className="text-6xl font-bold text-gray-900 mr-6">4.9</div>
+                <div>
+                  <div className="flex text-yellow-400 mb-2">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <FaStar key={star} className="text-xl" />
+                      <FaStar key={star} className="text-2xl mr-1" />
                     ))}
                   </div>
-                  <p className="text-gray-600">40.6k reviews</p>
+                  <p className="text-gray-600 text-lg">Based on 40.6k reviews</p>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                {[5, 4, 3, 2, 1].map((rating) => (
-                  <div key={rating} className="flex items-center">
-                    <span className="w-8 text-sm text-gray-600">{rating}</span>
-                    <div className="flex-1 bg-gray-200 rounded-full h-2 mx-3">
+              <div className="space-y-4">
+                {[
+                  { rating: 5, percentage: 85, count: "34.5k" },
+                  { rating: 4, percentage: 12, count: "4.9k" },
+                  { rating: 3, percentage: 2, count: "0.8k" },
+                  { rating: 2, percentage: 1, count: "0.4k" },
+                  { rating: 1, percentage: 0, count: "0.0k" },
+                ].map((item) => (
+                  <div key={item.rating} className="flex items-center">
+                    <span className="w-8 text-gray-600 font-medium">{item.rating}</span>
+                    <div className="flex-1 bg-gray-200 rounded-full h-3 mx-4">
                       <div
-                        className="bg-yellow-400 h-2 rounded-full"
-                        style={{ width: `${rating === 5 ? 80 : rating === 4 ? 15 : 3}%` }}
+                        className="bg-gradient-to-r from-yellow-400 to-orange-400 h-3 rounded-full transition-all duration-1000"
+                        style={{ width: `${item.percentage}%` }}
                       ></div>
                     </div>
-                    <span className="text-sm text-gray-600">
-                      {rating === 5 ? "32.5k" : rating === 4 ? "6.1k" : "1.2k"}
-                    </span>
+                    <span className="text-gray-600 font-medium w-12">{item.count}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="lg:w-1/2">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-xl border border-gray-100">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl mr-4 overflow-hidden">
+                    <Image
+                      src="/placeholder.svg?height=64&width=64"
+                      alt="Customer"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">Satisfied Customer</h4>
-                    <div className="flex text-yellow-400">
+                    <h4 className="font-bold text-gray-900 text-lg">Priya Mehta</h4>
+                    <div className="flex text-yellow-400 mt-1">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <FaStar key={star} className="text-sm" />
                       ))}
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600">
-                  Amazing service! The beautician was professional and the results were fantastic. Highly recommend
-                  NARI GLAM for at-home beauty services
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  "Absolutely amazing experience! The beautician was incredibly professional and skilled. The
+                  convenience of having salon-quality services at home is unmatched. NARI GLAM has become my go-to for
+                  all beauty needs."
                 </p>
               </div>
             </div>
@@ -309,87 +420,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Download Section */}
-      <section className="py-16 px-6 bg-pink-500">
-        <div className="max-w-6xl mx-auto">
+      {/* Premium App Download Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-pink-500 via-purple-600 to-indigo-600 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center text-white">
-            <div className="lg:w-1/2 mb-8 lg:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Get the NARI GLAM App</h2>
-              <p className="text-pink-100 mb-6">Download our app for easy booking and exclusive offers</p>
-              <div className="flex gap-4">
-                <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2">
-                  <FaApple className="text-xl" />
+            <div className="lg:w-1/2 mb-12 lg:mb-0">
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                <HiSparkles className="text-yellow-300 mr-2" />
+                <span className="text-white/90">Download Now</span>
+              </div>
+
+              <h2 className="text-4xl font-bold mb-6">Get the NARI GLAM App</h2>
+              <p className="text-white/90 text-xl mb-8 leading-relaxed">
+                Experience seamless booking, exclusive offers, and premium beauty services at your fingertips
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-black/80 backdrop-blur-sm text-white px-8 py-4 rounded-2xl flex items-center gap-3 hover:bg-black/90 transition-colors shadow-xl">
+                  <FaApple className="text-2xl" />
                   <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="font-semibold">App Store</div>
+                    <div className="text-xs opacity-80">Download on the</div>
+                    <div className="font-semibold text-lg">App Store</div>
                   </div>
                 </button>
-                <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2">
-                  <FaGooglePlay className="text-xl" />
+                <button className="bg-black/80 backdrop-blur-sm text-white px-8 py-4 rounded-2xl flex items-center gap-3 hover:bg-black/90 transition-colors shadow-xl">
+                  <FaGooglePlay className="text-2xl" />
                   <div className="text-left">
-                    <div className="text-xs">Get it on</div>
-                    <div className="font-semibold">Google Play</div>
+                    <div className="text-xs opacity-80">Get it on</div>
+                    <div className="font-semibold text-lg">Google Play</div>
                   </div>
                 </button>
               </div>
             </div>
+
             <div className="lg:w-1/2 flex justify-center">
-              <Image
-                src="/placeholder.svg?height=400&width=300"
-                alt="Woman with NARI GLAM App"
-                width={300}
-                height={400}
-                className="rounded-xl"
-              />
+              <div className="relative">
+                <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
+                  <Image
+                    src="/placeholder.svg?height=500&width=300"
+                    alt="Woman with NARI GLAM App"
+                    width={300}
+                    height={500}
+                    className="rounded-2xl shadow-xl"
+                  />
+                </div>
+
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-900">50%</div>
+                    <div className="text-sm text-gray-600">First Booking</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">NARI GLAM</h3>
-              <p className="text-gray-400">Premium beauty services at your doorstep</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Facial Treatments</li>
-                <li>Spa Services</li>
-                <li>Hair Care</li>
-                <li>Makeup</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Contact</li>
-                <li>Support</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Download App</h4>
-              <div className="flex gap-2">
-                <button className="bg-gray-800 p-2 rounded">
-                  <FaApple className="text-xl" />
-                </button>
-                <button className="bg-gray-800 p-2 rounded">
-                  <FaGooglePlay className="text-xl" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 NARI GLAM. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
