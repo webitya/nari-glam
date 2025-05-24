@@ -1,12 +1,10 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext, useContext } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiX, FiCheck, FiAlertCircle, FiInfo } from "react-icons/fi"
 
 // Toast context
-import { createContext, useContext } from "react"
-
 const ToastContext = createContext(null)
 
 export function useToast() {
